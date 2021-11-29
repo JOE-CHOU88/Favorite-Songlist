@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include shared/head %>
+</head>
+
+<body>
+  <% include shared/navbar %>
+
+    <header id="indexHeader" class="jumbotron header">
+      <div class="container">
+        <h1>家樂的歌單</h1>
+        <p>存放自己所有心儀的歌曲</p>
+      </div>
+    </header>
+    <section class="py-3">
+      <div class="container">
+        <h1>歌曲列表</h1>
+        <div class="row">
+          <!-- forEach迴圈開頭 -->
+          <% productList.forEach(product=> { %>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img src="<%= product.image %>" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    《<%= product.name %>》
+                  </h5>
+                  <p>
+                    <%= product.category %>
+                  </p>
+                  <p>
+                    <%= product.performer %>
+                  </p>
+                  <a href=<%=product.link %> class="btn btn-primary">Link</a>
+                  <a href="/product/edit/<%= product.id %>" class="btn btn-warning">Edit</a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+              <!-- forEach迴圈結尾 -->
+        </div>
+      </div>
+    </section>
+    <% include shared/scripts %>
+</body>
+
+</html>
