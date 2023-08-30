@@ -24,7 +24,7 @@ $ sudo npm i -g nodemon --unsafe-perm
 
 金鑰格式大致如下：
 ```
-${
+{
   "type": "...",
   "project_id": "...",
   "private_key_id": "...",
