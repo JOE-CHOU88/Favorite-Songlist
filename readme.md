@@ -2,20 +2,20 @@
 
 ### 快速開始
 ```
-$ npm install
-$ nodemon
+npm install
+nodemon
 ```
 
 ### 如果過去未曾安裝過nodemon
 
 ```
-$ npm i -g nodemon
+npm i -g nodemon
 ```
 
 MacOS需要輸入
 
 ```
-$ sudo npm i -g nodemon --unsafe-perm
+sudo npm i -g nodemon --unsafe-perm
 ```
 
 ### 加入 key.json，方便與 Firebase 資料庫互動
